@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Compound Monthly Growth Rate (CMGR)</title>
+	<meta name="description" content="Compound Monthly Growth Rate (CMGR)">
+	<meta name="author" content="Pam Wood Pate">
+	<meta name="generator" content="slidify" />
+	
+	<!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="libraries/frameworks/html5slides/default/styles.css">
+	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/solarized_light.css" />  <link rel="stylesheet" href = "assets/css/ribbons.css">
+  
+</head>
+<body style='display: none'>
+	<section class='slides layout-regular template-regular'>
+     <article class="" id="slide-1" style="background:;">
+  <h3>Defintion</h3>
+  <p>Paraphrased from <a href="http://www.investopedia.com/terms/c/cagr.asp:">www.investopedia.com/terms/c/cagr.asp:</a></p>
+
+<p>The month-over-month growth rate of an investment over a specified period of time. The compound monthly growth rate is calculated by taking the nth root of the total percentage growth rate, where n is the number of months in the period being considered.</p>
+
+</article>
+
+<article class="" id="slide-2" style="background:;">
+  <h3>Why?</h3>
+  <p><br/></p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>Why CMGR? </p>
+
+<ul>
+<li>Often compound yearly growth rate is not realistic</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>Why Shiny App?</p>
+
+<ul>
+<li>Calculates the formula automatically, just enter necessary values</li>
+</ul>
+
+</div>
+<div>
+  
+</div>
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Formula</h3>
+  <ul>
+<li><strong>CMGR</strong> = Compund Monthly Growth Rate</li>
+<li><strong>L</strong> = Last Month&#39;s value</li>
+<li><strong>F</strong> = First Month&#39;s value</li>
+<li><strong>N</strong> = Total Number of Month&#39;s</li>
+</ul>
+
+<p>CMGR = ((L / F) ^ (1 / N)) - 1</p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Function</h3>
+  <pre><code class="r">CMGR &lt;- function(last, first, n) {
+  paste(round((((last / first) ^ (1 / n)) - 1) * 100, digits = 2), &quot;%&quot;)
+  }
+
+CMGR(200,100,4)
+</code></pre>
+
+<pre><code>## [1] &quot;18.92 %&quot;
+</code></pre>
+
+</article>
+
+  </section>
+</body>
+  <!-- LOAD JAVASCRIPTS  -->
+	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
+	<!-- LOAD HIGHLIGHTER JS FILES -->
+	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+	 
+	</html>
