@@ -17,7 +17,7 @@ shinyUI(pageWithSidebar(
 ##    verbatimTextOutput("inputNew"),
 ##    h4('Number of Occurances'),
 ##    verbatimTextOutput("inputN"),
-    h4('CMGR'),
+    h2('CMGR ='),
     verbatimTextOutput("prediction")
   )
 ))
